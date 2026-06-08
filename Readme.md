@@ -2,6 +2,7 @@
 
 * Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss-individual/2/user/2711729).
 * Наставник: [Андрей Корейкин](https://htmlacademy.ru/profile/ankormoreankor)
+* Ссылка на сайт проекта: [клик](https://tzhiltsova.github.io/2711729-sedona-2/)
 
 ---
 
