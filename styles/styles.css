@@ -31,15 +31,36 @@
   font-display: swap;
 }
 
-.booking-button {
+.button {
   font-family: "PT Sans";
   color: white;
-  background-color: #756157;
+  background-color: #82B3D3;
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
+  border: none;
+}
+
+a.button {
+  color: white;
+  background-color: #756157;
+}
+
+.button-show {
+  color: #000000;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  text-decoration: none;
+  border: 2px solid;
+  border-color: #00000027;
+}
+
+.button-click {
+  border: 2px solid;
+  border-color: #000000;
 }
 
 body {
@@ -63,6 +84,20 @@ body {
   font-weight: 700;
   text-decoration: none;
   color:#000000;
+}
+
+.navigation-user .navigation-link {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.likes {
+  font-size: 10px;
+  line-height: 10px;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  border-radius: 100%;
+  padding: 5px;
 }
 
 .heading {
@@ -113,4 +148,108 @@ body {
   background-color: #82B3D3;
   background-image: url("../images/subscribe.jpg");
   background-position: center center;
+}
+
+.subscription-footer {
+  color: #000000;
+  background-color: #FFFFFF;
+  background-image: none;
+}
+
+.navigation-link {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.page-footer a {
+  color: #83B3D3;
+  background-color: transparent;
+}
+
+address .footer-contacts-address-phone {
+    font-family: "PT Sans";
+    color: #000000;
+    font-size: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.header-filter-style {
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  background-image: url("../images/catalog-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 150% auto;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.breadcrumbs-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+fieldset {
+  border: transparent;
+}
+
+.product-card-link {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000000;
+}
+
+.type-price {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.product-rating {
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+}
+
+.pagination-link {
+  font-size: 20px;
+  line-height: 36px;
+  color:#FFFFFF;
+  background-color: #83B3D3;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pagination {
+  text-align: left;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination-others {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #FFFFFF;
 }
