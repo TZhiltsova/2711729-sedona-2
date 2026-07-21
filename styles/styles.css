@@ -121,6 +121,7 @@ body {
 .subtext {
   font-size: 22px;
   line-height: 26px;
+  color: #333333;
 }
 
 
@@ -129,6 +130,10 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.advantages-description {
+  color: #333333;
 }
 
 .title {
@@ -221,11 +226,13 @@ fieldset {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+  color: #333333;
 }
 
 .product-rating {
   text-transform: uppercase;
   background-color: #F2F2F2;
+  color: #333333;
 }
 
 .pagination-link {
