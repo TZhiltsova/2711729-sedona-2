@@ -163,17 +163,33 @@ body {
   padding: 0;
 }
 
+.heading-text {
+  height: 261px;
+  display: flex;
+  flex-direction: column;
+  padding: 69px auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 21px;
+}
+
 .heading-main-text{
-  font-size: 32px;
+  font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  width: 620px;
+  height: 72px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 25px;
 }
 
 .subtext {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin: 0;
 }
 
 .advantages-list {
@@ -213,8 +229,18 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   font-weight: 700;
-  width: 103px;
 }
+
+.services-head {
+  height: 246px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 347px;
+}
+
+
 
 .services-name {
   font-size: 24px;
