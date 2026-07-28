@@ -63,7 +63,15 @@ a.button {
   border-color: #000000;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   text-align: center;
   font-size: 18px;
@@ -72,10 +80,31 @@ body {
   background-color: #FFFFFF;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 /*Pages styles*/
 .page-header {
   color: #000000;
   background-color: #FFFFFF;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  width: 138px;
+  height: 64px;
+}
+
+.navigation-list {
+  width: 465px;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation-link {
@@ -86,9 +115,11 @@ body {
   color:#000000;
 }
 
-.navigation-user .navigation-link {
+.navigation-user {
+  max-width: 270px;
   font-size: 16px;
   line-height: 20px;
+  margin-left: auto;
 }
 
 .likes {
@@ -100,15 +131,36 @@ body {
   padding: 5px;
 }
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .heading {
   text-align: center;
 }
 
 .hero-picture {
+  height: 485px;
   background-color: #82B3D3;
   background-image: url("../images/index-background.jpg");
-  background-size: 120% auto;
+  background-size: 100% auto;
   background-repeat: no-repeat;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.heading-logo {
+  width: 458px;
+  height: 352px;
+  margin: 51px auto 25px;
+}
+
+.heading-border {
+  width: 1200px;
+  height: 57px;
+  padding: 0;
 }
 
 .heading-main-text{
@@ -124,6 +176,30 @@ body {
   color: #333333;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-item {
+  display: flex;
+}
+
+.advantages-allignment {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 230px;
+  height: 181px;
+  margin: 102px 85px;
+}
+
+.advantages-description {
+  color: #333333;
+}
 
 .advantages-title {
   font-size: 24px;
@@ -132,15 +208,12 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-description {
-  color: #333333;
-}
-
 .title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   font-weight: 700;
+  width: 103px;
 }
 
 .services-name {
