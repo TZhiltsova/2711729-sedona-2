@@ -478,8 +478,33 @@ justify-content: space-between;
   flex-direction: column;
   width: 191px;
   height: 104px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-self: flex-end;
+}
+
+.filter-buttons .button:last-child {
+  background-color: transparent;
+}
+
+.catalog-products {
+  width: 1060px;
+  margin: 50px 70px 60px;
+}
+
+.cards-head {
+  display: flex;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  width: 340px;
+  padding: 0;
+  margin: 0;
 }
 
 .product-card-link {
@@ -513,7 +538,15 @@ text-decoration: none;
 }
 
 .pagination {
-text-align: left;
+  display: flex;
+}
+
+.pagination-item {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .pagination-current {
