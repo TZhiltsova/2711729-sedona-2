@@ -56,9 +56,15 @@ line-height: 21px;
 font-weight: 400;
 text-decoration: none;
 border: 2px solid;
+border-radius: 4px;
 border-color: #00000027;
 width: 48px;
 height: 48px;
+margin-right: 8px;
+}
+
+.button-show:last-child {
+  margin-right: 0;
 }
 
 .button-click {
@@ -546,21 +552,35 @@ justify-content: space-between;
   margin: 50px 70px 60px;
 }
 
+.buttons-shows-row {
+  display: flex;
+
+}
+
 .cards-head {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
 }
 
 .catalog-respond-title {
-  margin-right: 200px;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .select-control {
+  width: 292px;
   margin-right: 70px;
+  align-self: stretch;
 }
 .product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
 }
 
 .product-card {
@@ -591,30 +611,40 @@ color: #333333;
 }
 
 .pagination-link {
+display: block;
+background-color: #83B3D3;
+box-sizing: border-box;
 font-size: 20px;
 line-height: 36px;
 color:#FFFFFF;
-background-color: #83B3D3;
 font-weight: 700;
 text-decoration: none;
+width: 60px;
+height: 60px;
+padding-top: 12px;
+border-radius: 4px;
+}
+
+.pagination-item {
+  margin-right: 8px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
 }
 
 .pagination {
   display: flex;
+  list-style: none;
 }
 
-.pagination-item {
-  width: 60px;
-  height: 60px;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
 
 .pagination-current {
 color: #000000;
 background-color: #F2F2F2;
 }
+
+
 
 .pagination-others {
 font-size: 22px;
