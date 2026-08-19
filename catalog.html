@@ -82,20 +82,25 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="pool" checked>
-                        Бассейн
+                      <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                        <span class="control-mark"></span>
+                        <span class="control-label">Бассейн</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" checked>
-                        Парковка
+                      <span class="control-mark"></span>
+                      <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Парковка</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="control-input" type="checkbox" name="wi-fi">
-                        Wi-Fi
+                      <span class="control-mark"></span>
+                      <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
+                        <span class="control-mark"></span>
+                        <span class="control-label">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -126,13 +131,36 @@
               </fieldset>
             </div>
             <div class="filter-right-col">
-              <fieldset class="catalog-price-slider">
-                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                <label class="control-price">
-                  <input class="control-price-input" type="range" id="lower" oninput="upper.value=this.value<this.max?this.value:upper.value" min="0" max="10000" step="1">
-                  <input class="control-price-input" type="range" id="upper" oninput="lower.value=this.value>lower.min?this.value:lower.value" min="0" max="10000" step="1">
-                </label>
-              </fieldset>
+              <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+
+                  <div class="range">
+
+                    <div class="range-wrapper-inputs">
+                      <label class="catalog-filter-label">
+                        <input class="range-input start" type="number" value="50" name="min-price" placeholder="от">
+                        <span class="filter-text">от</span>
+                      </label>
+                      <label class="catalog-filter-label">
+                        <input class="range-input stop" type="number" value="9000" name="max-price" placeholder="до">
+                        <span class="filter-text">до</span>
+                      </label>
+                    </div>
+
+                    <div class="range-scale">
+                      <div class="range-bar" style="left: 0; width: 226px">
+                        <button class="range-toggle toggle-min">
+                          <span class="visually-hidden">Изменить минимальную цену</span>
+                        </button>
+                        <button class="range-toggle toggle-max">
+                          <span class="visually-hidden">Изменить максимальную цену</span>
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
               <div class="filter-buttons">
                 <button class="button" type="submit">Применить</button>
                 <button class="button" type="reset">Сбросить</button>
