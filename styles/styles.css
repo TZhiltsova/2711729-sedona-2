@@ -481,9 +481,7 @@ justify-content: center;
 align-items: center;
 }
 
-.subscription-text {
-width: 475px;
-}
+
 
 .subscription-title {
 margin: 0;
@@ -518,6 +516,27 @@ margin: 40px auto 30px;
 justify-content: space-between;
 align-items: center;
 padding: 0 70px;
+}
+
+.subscription-form {
+  display: grid;
+  grid-template-columns: 452px 232px;
+  grid-template-rows: 52px;
+}
+
+.field {
+  font-family: inherit;
+  font-size: 18px;
+  border: none;
+  padding-left: 20px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: #F2F2F2;
+}
+
+.subscription-button {
+  border-radius: 0;
+  cursor: pointer;
 }
 
 .footer-social-list {
@@ -699,6 +718,9 @@ text-transform: none;
   fill: #fff;
 }
 
+.catalog-filter-group {
+  width: 288px;
+}
 
 .catalog-filter-title {
   font-size: 20px;
@@ -771,6 +793,148 @@ justify-content: space-between;
 
 .filter-buttons .button:last-child:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-top: 36px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 288px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #fff;
+}
+
+.range-toggle {
+  border: 0;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-title {
+  text-align: left;
+}
+
+.catalog-filter-label {
+  display: flex;
+  position: relative;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.control:hover .control-mark {
+  border: 3px solid;
+  border-color: #82B3D3;
+}
+
+.control-input:disabled + .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 12px;
+  height: 2px;
+  background-color: #3F5E72;
+  content: "";
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  transform: rotate(45deg);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  transform: rotate(-45deg);
+}
+
+.filter-text {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.3);
+  top: 12px;
+  left: 103px;
+}
+
+
+.range-input {
+  width: 143px;
+  height: 48px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font: inherit;
+  background-color: #fff;
+  border: none;
+  font-weight: 700;
+  appearance: textfield;
+  margin: 0;
+}
+
+.range-input.start {
+  border-radius: 2px 0 0 2px;
+}
+
+.range-input.stop {
+  border-radius: 0 2px 2px 0;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .catalog-products {
