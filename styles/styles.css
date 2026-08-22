@@ -871,10 +871,26 @@ justify-content: space-between;
   height: 20px;
   background-color: #fff;
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
-.control:hover .control-mark {
+.control-input:hover ~ .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-input:active ~ .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:hover ~ .control-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.control-input:active ~ .control-label {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.control:focus .control-mark {
+  border-radius: 8px;
   border: 3px solid;
   border-color: #82B3D3;
 }
@@ -883,12 +899,25 @@ justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-label {
+  line-height: 23px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 11px;
+  left: 3px;
+  width: 7px;
+  height: 2px;
+  background-color: #3F5E72;
+  content: "";
+}
+
 .control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
-  top: 7px;
-  left: 2px;
-  width: 12px;
+  top: 9px;
+  left: 6px;
+  width: 13px;
   height: 2px;
   background-color: #3F5E72;
   content: "";
@@ -900,6 +929,50 @@ justify-content: space-between;
 
 .control-input[type="checkbox"]:checked + .control-mark::after {
   transform: rotate(-45deg);
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  margin-right: auto;
+}
+
+
+.select-control {
+  width: 100%;
+  padding: 8px 14px;
+  padding-right: 48px;
+  font: inherit;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border-color: #68A2CA;
 }
 
 .filter-text {
@@ -1102,4 +1175,123 @@ line-height: 26px;
 font-weight: 400;
 color: #000000;
 background-color: #FFFFFF;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.modal-search {
+  width: 717px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #ffffff;
+  border: none;
+  background-image: url("../images/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 247px 242px;
+  grid-template-rows: 48px 48px 48px;
+  grid-column-gap: 88px;
+  grid-row-gap: 48px;
+  margin-bottom: 48px;
+}
+
+.field-group {
+  display: flex;
+  grid-column: 1/-1;
+  margin: 0;
+  align-items: center;
+  position: relative;
+}
+
+.modal-lable {
+  min-width: 118px;
+  margin-right: 18px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.field {
+  flex-grow: 1;
+  height: 48px;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+
+.field-adults {
+  grid-column: 1/2;
+}
+
+.field-childrens {
+  grid-column: 2/3;
+}
+
+.adults {
+  width: 110px;
+}
+
+.childrens {
+  width: 110px;
+}
+
+.button.modal-search-result {
+  background-color: #83B3D3;
+  width: 577px;
+  padding: 18px 256.5px;
+}
+
+.modal-notification {
+  position: absolute;
+  top: 52px;
+  left: 132px;
+  padding-left: 20px;
+}
+
+.modal-notification.in {
+  color: #FF5757;
 }
