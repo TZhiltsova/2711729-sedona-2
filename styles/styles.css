@@ -1194,6 +1194,7 @@ background-color: #FFFFFF;
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
 }
 
 .modal-search {
@@ -1254,12 +1255,18 @@ background-color: #FFFFFF;
   text-align: left;
 }
 
-.field {
+.field-childrens .modal-lable {
+  margin-right: 14px;
+  position: relative;
+}
+
+.modal-field {
   flex-grow: 1;
   height: 48px;
   padding: 14px 20px;
   box-sizing: border-box;
   border-radius: 4px;
+  position: relative;
 }
 
 
@@ -1271,18 +1278,65 @@ background-color: #FFFFFF;
   grid-column: 2/3;
 }
 
+.field-group-one::after,
+.field-group-two::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  order: 2;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  opacity: 30%;
+}
+
 .adults {
   width: 110px;
+  position: relative;
 }
 
 .childrens {
   width: 110px;
+  position: relative;
+}
+
+.minus-icon {
+  position: absolute;
+  top: 23px;
+  left: 150px;
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.plus-icon {
+  position: absolute;
+  top: 17px;
+  right: 12px;
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.modal-form-text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 157px;
+}
+
+.modal-form-text.count {
+  left: 187px;
 }
 
 .button.modal-search-result {
   background-color: #83B3D3;
   width: 577px;
-  padding: 18px 256.5px;
+  padding: 18px 257px;
+  margin-bottom: 64px;
 }
 
 .modal-notification {
@@ -1294,4 +1348,65 @@ background-color: #FFFFFF;
 
 .modal-notification.in {
   color: #FF5757;
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.tooltip {
+  position: absolute;
+  left: 59px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  display: block;
+  margin-bottom: 15px;
+}
+
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  width: 256px;
+  box-sizing: border-box;
+  text-align: left;
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text:after {
+  content: '';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
