@@ -58,7 +58,7 @@
           <h1 class="visually-hidden">Седона приветсвие</h1>
           <div class="hero-picture">
             <img class="heading-logo" src="images/welcome.svg" lang="en" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
-            <img class="heading_border" src="images/border_hero.svg">
+            <img class="heading_border" src="images/border_hero.svg" alt="Граница изображения">
           </div>
           <div class="heading-text">
             <p class="heading-main-text">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
@@ -131,7 +131,7 @@
           <div class="booking-text">
             <h2 class="title booking-title">Заинтересовались?</h2>
             <p class="subtext booking-subtext">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <a class="button booking-button" type="submit" href="catalog.html">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+            <a class="button booking-button" href="catalog.html">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
           </div>
         </section>
         <section class="subscription">
@@ -140,7 +140,7 @@
             <p class="subtext subscription-subtext">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscription-form" action="https://echo.htmlacademy.ru/courses" method="post">
               <label class="visually-hidden" for="subscription-email">Email</label>
-              <input class="field" type="email" name="subscribe" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email" required>
+              <input class="field" type="email" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email" required>
               <button class="button subscription-button" type="submit">
                 <span class="subscription-button">Подписаться</span>
               </button>
@@ -214,7 +214,7 @@
             </p>
             <p class="field-group field-group-two">
               <label class="modal-lable" for="checkout-date">Дата Выезда:</label>
-              <input class="checkout-date modal-field field" type="text" id="heckout-date" name="auth-password">
+              <input class="checkout-date modal-field field" type="text" id="сheckout-date" name="auth-password">
               <span class="modal-form-text">1 сентября 2023</span>
               <span class="modal-notification out">На эти даты есть свободные номера. Пока есть.</span>
             </p>
@@ -224,10 +224,12 @@
                 <svg class="minus-icon" width="14" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L0 2L14 2V0L0 0Z"/>
                 </svg>
+                <span class="visually-hidden">Уменьшить число</span>
                 <span class="modal-form-text count">2</span>
                 <svg class="plus-icon" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                 </svg>
+                <span class="visually-hidden">Увеличеть число</span>
             </p>
             <p class="field-group field-childrens">
                 <label class="modal-lable" for="childrens">Дети:</label>
@@ -246,10 +248,12 @@
                 <svg class="minus-icon" width="14" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0L0 2L14 2V0L0 0Z"/>
                 </svg>
+                <span class="visually-hidden">Уменьшить число</span>
                 <span class="modal-form-text count">2</span>
                 <svg class="plus-icon" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                 </svg>
+                <span class="visually-hidden">Увеличеть число</span>
             </p>
           </form>
           <a class="button modal-search-result" href="#">Найти</a>
