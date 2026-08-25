@@ -69,6 +69,22 @@ a.button:focus {
   color: rgba(255, 255, 255, 0.3)
 }
 
+.button:disabled {
+  color: #E5E5E5;
+}
+
+.product-favorite-button {
+  background-color: #7DB54F;
+}
+
+.product-favorite-button:hover,
+.product-favorite-button:focus {
+  background-color: #6C9E42;
+}
+
+.product-favorite-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 .button-show {
 color: #000000;
@@ -103,11 +119,6 @@ margin-right: 8px;
   margin-right: 0;
 }
 
-/* .button-click {
-border: 2px solid;
-border-color: #000000;
-} */
-
 html {
 height: 100%;
 }
@@ -123,6 +134,7 @@ font-size: 18px;
 line-height: 21px;
 color: #333333;
 background-color: #FFFFFF;
+min-width: 1280px;
 }
 
 .visually-hidden {
@@ -150,6 +162,7 @@ margin: 0 auto;
 .navigation {
 display: flex;
 box-sizing: border-box;
+position: relative;
 width: 1200px;
 padding: 0 70px;
 justify-content: space-between;
@@ -157,12 +170,10 @@ justify-content: space-between;
 
 .nav-left-col {
   display: flex;
-  width: 507px;
-  height: 64px;
-
 }
+
 .navigation-logo {
-  position: relative;
+  position: absolute;
   width: 140px;
   height: 72px;
   margin-right: 30px;
@@ -174,6 +185,7 @@ justify-content: space-between;
   width: 465px;
   margin: 0;
   padding: 0;
+  margin-left: 238px;
   list-style-type: none;
   flex-wrap: wrap;
 }
@@ -202,7 +214,6 @@ justify-content: space-between;
 
 .navigation-item {
   position: relative;
-  height: 64px;
 }
 
 .navigation-link.likes::after {
@@ -225,6 +236,7 @@ justify-content: space-between;
 max-width: 270px;
 font-size: 16px;
 line-height: 20px;
+margin: 0;
 }
 
 .navigation-user .navigation-link {
@@ -325,7 +337,7 @@ flex-direction: column;
 align-content: center;
 justify-content: center;
 width: 230px;
-height: 181px;
+min-height: 181px;
 margin: 102px 85px;
 align-self: center;
 }
@@ -365,20 +377,20 @@ text-transform: uppercase;
 margin: 0;
 margin-bottom: 62px;
 margin-left: 27px;
+position: relative;
 }
 
-.advantages-title::after {
+.advantages-title::before {
   position: absolute;
-  bottom: 0;
-  left: 85px;
-  top: 86px;
+  bottom: -30px;
+  left: 57px;
+  width: 60px;
   height: 2px;
-  right: 85px;
   background-color: rgba(0, 0, 0, 0.3);
   content: "";
 }
 
-.dark-blue .advantages-title::after {
+.dark-blue .advantages-title::before {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -445,12 +457,12 @@ text-transform: uppercase;
 display: flex;
 flex-direction: column;
 align-items: center;
-height: 406px;
+margin-top: 64px;
+margin-bottom: 64px;
 }
 
 .booking-text {
 width: 592px;
-padding: 96px 0;
 }
 
 .booking-title {
@@ -536,7 +548,8 @@ padding: 0 70px;
 .subscription-form {
   display: grid;
   grid-template-columns: 452px 232px;
-  grid-template-rows: 52px;
+  margin-right: 258px;
+  margin-left: 258px;
 }
 
 .field {
@@ -657,7 +670,7 @@ text-transform: none;
   background-image: url("../images/catalog-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 412px;
+  min-height: 412px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -694,7 +707,7 @@ text-transform: none;
   display: block;
   position: relative;
   margin-right: 28px;
-  width: 15px;
+  min-width: 15px;
 }
 
 .breadcrumbs-link:hover,
@@ -788,7 +801,7 @@ justify-content: space-between;
   display: flex;
   flex-direction: column;
   width: 191px;
-  height: 104px;
+  min-height: 104px;
   justify-content: space-between;
   align-self: flex-end;
 }
@@ -990,6 +1003,11 @@ justify-content: space-between;
   border-color: #68A2CA;
 }
 
+.select-control:disabled {
+  border-color: #333333;
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .filter-text {
   position: absolute;
   color: rgba(0, 0, 0, 0.3);
@@ -1119,7 +1137,7 @@ justify-content: space-between;
 .product-rating {
 display: block;
 box-sizing: border-box;
-height: 37px;
+min-height: 37px;
 text-transform: uppercase;
 background-color: #F2F2F2;
 text-align: center;
@@ -1156,8 +1174,8 @@ line-height: 36px;
 color:#FFFFFF;
 font-weight: 700;
 text-decoration: none;
-width: 60px;
-height: 60px;
+min-width: 60px;
+min-height: 60px;
 padding-top: 12px;
 border-radius: 4px;
 }
