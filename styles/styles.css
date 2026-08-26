@@ -666,6 +666,7 @@ line-height: 78px;
 font-weight: 700;
 margin: 0;
 text-transform: none;
+margin-bottom: 8px;
 }
 
 .header-filter-style {
@@ -754,6 +755,10 @@ text-transform: none;
 
 .catalog-filter-group {
   width: 288px;
+}
+
+.catalog-filter-group:first-child {
+  margin-right: 70px;
 }
 
 .catalog-filter-title {
