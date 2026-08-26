@@ -9,9 +9,12 @@
   </head>
 
   <body>
+    <div class="shadow">
        <header class="page-header">
       <nav class="navigation">
+        <a class="logo-link" href="index.html">
           <img class="navigation-logo" src="images/logo.svg" alt="Город Седона">
+        </a>
           <div class="nav-left-col">
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -140,11 +143,11 @@
 
                       <div class="range-wrapper-inputs">
                         <label class="catalog-filter-label">
-                          <input class="range-input start" type="number" value="0" name="min-price" placeholder="от">
+                          <input class="range-input start" type="number" name="min-price" placeholder="0">
                           <span class="filter-text">от</span>
                         </label>
                         <label class="catalog-filter-label">
-                          <input class="range-input stop" type="number" value="9000" name="max-price" placeholder="до">
+                          <input class="range-input stop" type="number" name="max-price" placeholder="9000">
                           <span class="filter-text">до</span>
                         </label>
                       </div>
@@ -164,7 +167,7 @@
                   </fieldset>
                 <div class="filter-buttons">
                   <button class="button" type="submit">Применить</button>
-                  <button class="button" type="reset">Сбросить</button>
+                  <button class="button reset-button" type="reset">Сбросить</button>
                 </div>
               </div>
             </form>
@@ -367,5 +370,6 @@
         </section>
       </div>
     </footer>
+  </div>
   </body>
 </html>
