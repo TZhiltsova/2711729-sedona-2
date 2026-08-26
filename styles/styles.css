@@ -1339,7 +1339,6 @@ background-color: #FFFFFF;
   grid-template-rows: 48px 48px 48px;
   grid-column-gap: 88px;
   grid-row-gap: 48px;
-  margin-bottom: 48px;
 }
 
 .field-group {
@@ -1441,7 +1440,7 @@ background-color: #FFFFFF;
   background-color: #83B3D3;
   width: 577px;
   padding: 18px 257px;
-  margin-bottom: 64px;
+  box-sizing: border-box;
 }
 
 .modal-notification {
