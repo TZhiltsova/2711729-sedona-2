@@ -1157,7 +1157,7 @@ justify-content: space-between;
 
 .product-description {
   display: grid;
-  gap: 20px 16px;
+  gap: 16px 20px;
   grid-template-columns: 140px 140px;
   align-items: center;
 }
