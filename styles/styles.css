@@ -185,7 +185,7 @@ justify-content: space-between;
   width: 465px;
   margin: 0;
   padding: 0;
-  margin-left: 238px;
+  margin-left: 168px;
   list-style-type: none;
   flex-wrap: wrap;
 }
@@ -656,6 +656,7 @@ font-style: normal;
 .inner-header {
 width: 1060px;
 text-align: left;
+margin: 0;
 margin-bottom: 40px;
 }
 
@@ -674,10 +675,11 @@ text-transform: none;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: 412px;
+  padding-top: 35px;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .catalog-filter {
