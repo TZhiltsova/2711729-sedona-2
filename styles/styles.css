@@ -141,7 +141,6 @@ line-height: 21px;
 color: #333333;
 background-color: #F2F2F2;
 min-width: 1280px;
-position: relative;
 }
 
 .page-shadow {
@@ -175,11 +174,16 @@ margin: 0 auto;
 .page-footer-container {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 } */
+.shadow {
+  margin: 0 auto;
+  width: 1200px;
+  height: 100%;
+  position: relative;
+}
 
-body::before {
+.shadow::before {
   position: absolute;
   width: 1200px;
-  left: 40px;
   height: 100%;
   content: "";
   background-color: transparent;
@@ -574,6 +578,7 @@ margin: 0 auto;
 justify-content: space-between;
 align-items: center;
 padding: 40px 70px;
+background-color: #fff;
 }
 
 .subscription-form {
@@ -1247,6 +1252,7 @@ border-radius: 4px;
   list-style: none;
   padding: 0;
   position: relative;
+  margin: 0 0 60px 0;
 }
 
 .pagination:before {
