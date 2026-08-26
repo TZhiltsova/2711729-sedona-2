@@ -134,8 +134,12 @@ text-align: center;
 font-size: 18px;
 line-height: 21px;
 color: #333333;
-background-color: #FFFFFF;
+background-color: #F2F2F2;
 min-width: 1280px;
+}
+
+.page-shadow {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 .visually-hidden {
@@ -272,6 +276,7 @@ margin: 0;
 .page-container {
 width: 1200px;
 margin: 0 auto;
+background-color: #fff;
 }
 
 .heading {
@@ -1110,7 +1115,7 @@ justify-content: space-between;
 .product-card {
   padding: 20px;
   margin: 0;
-  border: 2px solid;
+  border: 1px solid;
   border-color: #E5E5E5;
   border-radius: 4px;
   box-sizing: border-box;
@@ -1119,9 +1124,6 @@ justify-content: space-between;
 .product-card-link {
   display: block;
   width: 300px;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
   text-decoration: none;
   color: #000000;
 }
@@ -1130,6 +1132,10 @@ justify-content: space-between;
   display: block;
   width: 100%;
   margin: 16px auto;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: left;
 }
 
 .product-description {
