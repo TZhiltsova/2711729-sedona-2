@@ -205,6 +205,7 @@
   <div class="modal-container modal-container-close">
     <div class="modal modal-search">
       <button class="modal-close-button">
+          <svg class="modal-cross" xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path d="M14 1.292 12.708 0 7 5.708 1.292 0 0 1.292 5.708 7 0 12.708 1.292 14 7 8.292 12.708 14 14 12.708 8.292 7z"/></svg>
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
@@ -223,14 +224,17 @@
             <fieldset class="field-group field-adults">
               <label class="modal-lable" for="adults">Взрослые:</label>
               <input class="adults modal-field field" type="text" id="adults" name="adults" value="2">
-                <svg class="minus-icon" width="14" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0L0 2L14 2V0L0 0Z"/>
+              <div class="minus-button">
+                <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M3 9v2h14V9z"/></svg>
                 </svg>
                 <span class="visually-hidden">Уменьшить число</span>
+              </div>
+              <div class="plus-button">
                 <svg class="plus-icon" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                 </svg>
                 <span class="visually-hidden">Увеличеть число</span>
+              </div>
             </fieldset>
             <fieldset class="field-group field-childrens">
                 <label class="modal-lable" for="childrens">Дети:</label>
@@ -246,14 +250,17 @@
 
 
               <input class="childrens modal-field field" type="text" id="childrens" name="childrens" value="2">
-                <svg class="minus-icon" width="14" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                <div class="minus-button">
+                <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M3 9v2h14V9z"/></svg>
                 </svg>
                 <span class="visually-hidden">Уменьшить число</span>
+              </div>
+              <div class="plus-button">
                 <svg class="plus-icon" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                 </svg>
                 <span class="visually-hidden">Увеличеть число</span>
+              </div>
             </fieldset>
             <button class="button modal-search-result" type="submit">Найти</button>
           </form>
