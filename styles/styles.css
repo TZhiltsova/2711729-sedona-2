@@ -550,6 +550,16 @@ li.blue {
   fill: #756157;
 }
 
+.footer-logo:focus-visible {
+  outline: none;
+  fill: #756157;
+}
+
+.footer-logo-link:focus-visible {
+  outline: none;
+  fill: #756157;
+}
+
 .footer-logo-img:focus-visible {
   outline: none;
   fill: #756157;
