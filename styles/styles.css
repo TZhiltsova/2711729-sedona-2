@@ -54,6 +54,12 @@
   background-color: #68a2ca;
 }
 
+.pagination-current:hover,
+.pagination-current:focus-visible {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
 .button.modal-search-result:hover {
   background-color: #68a2ca;
 }
@@ -63,16 +69,19 @@
   background-color: #68a2ca;
 }
 
-a.button {
+a.button,
+.booking-button {
   color: white;
   background-color: #756157;
 }
 
-a.button:hover {
+a.button:hover,
+.booking-button:hover {
   background-color: #615048;
 }
 
-a.button:focus-visible {
+a.button:focus-visible,
+.booking-button:focus-visible {
   outline: none;
   background-color: #615048;
 }
@@ -245,14 +254,19 @@ body {
   position: relative;
 }
 
-.navigation-link.likes::after {
+.navigation-link.likes {
+  position: relative;
+}
+
+
+.likes-count {
   position: absolute;
   display: block;
   top: 11px;
   left: 20px;
   width: 12px;
   height: 12px;
-  content: "12";
+  content: "";
   font-size: 10px;
   line-height: 10px;
   color: #ffffff;
