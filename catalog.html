@@ -29,15 +29,14 @@
               <li class="navigation-item">
                 <a
                   class="navigation-link navigation-current"
-                  href="catalog.html"
-                  >Гостиницы</a
-                >
+                  href="#"
+                  >Гостиницы</a>
               </li>
             </ul>
           </div>
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
+              <a class="navigation-link" href="/search">
                 <svg
                   class="navigation-icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,25 +52,18 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link likes" href="#">
-                <svg
-                  class="navigation-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="none"
-                >
-                  <path
-                    d="M9.9 19C9.6 19 9.3 18.9 9.1 18.6C3.7 12.5 2.4 11.1 2.1 10.7C1.4 9.8 1 8.6 1 7.4C1 4.4 3.4 2 6.5 2C7.8 2 9 2.5 10 3.3C11 2.5 12.3 2 13.5 2C16.5 2 19 4.4 19 7.4C19 8.7 18.5 9.9 17.7 10.8L10.7 18.7C10.5 18.9 10.3 19 9.9 19ZM3.9 9.5C4.2 9.9 7.4 13.5 10 16.4L16.2 9.4C16.7 8.9 16.9 8.2 16.9 7.4C16.9 5.6 15.4 4.1 13.6 4.1C12.6 4.1 11.6 4.6 10.9 5.4C10.6 5.7 10.3 5.8 10 5.8C9.7 5.8 9.4 5.6 9.2 5.4C8.5 4.6 7.5 4.1 6.5 4.1C4.7 4.1 3.2 5.6 3.2 7.4C3.1 8.3 3.5 9 3.9 9.5C3.8 9.5 3.8 9.5 3.9 9.5Z"
-                  />
-                </svg>
-                <span class="visually-hidden">
-                  Избранное <span class="likes">12</span>
-                </span>
-              </a>
-            </li>
+            <a class="navigation-link likes" href="/favorite">
+              <svg class="navigation-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+                <path d="M9.9 19C9.6 19 9.3 18.9 9.1 18.6C3.7 12.5 2.4 11.1 2.1 10.7C1.4 9.8 1 8.6 1 7.4C1 4.4 3.4 2 6.5 2C7.8 2 9 2.5 10 3.3C11 2.5 12.3 2 13.5 2C16.5 2 19 4.4 19 7.4C19 8.7 18.5 9.9 17.7 10.8L10.7 18.7C10.5 18.9 10.3 19 9.9 19ZM3.9 9.5C4.2 9.9 7.4 13.5 10 16.4L16.2 9.4C16.7 8.9 16.9 8.2 16.9 7.4C16.9 5.6 15.4 4.1 13.6 4.1C12.6 4.1 11.6 4.6 10.9 5.4C10.6 5.7 10.3 5.8 10 5.8C9.7 5.8 9.4 5.6 9.2 5.4C8.5 4.6 7.5 4.1 6.5 4.1C4.7 4.1 3.2 5.6 3.2 7.4C3.1 8.3 3.5 9 3.9 9.5C3.8 9.5 3.8 9.5 3.9 9.5Z"/>
+              </svg>
+              <span class="visually-hidden">
+                Избранное
+              </span>
+              <span class="likes-count">12</span>
+            </a>
+          </li>
             <li class="navigation-item">
-              <a class="button navigation-link" href="#">ХОЧУ СЮДА!</a>
+              <a class="button navigation-link" href="/choose">ХОЧУ СЮДА!</a>
             </li>
           </ul>
         </nav>
@@ -103,7 +95,7 @@
                   >
                 </li>
                 <li class="breadcrumbs-item">
-                  <a class="breadcrumbs-link">Гостиницы</a>
+                  <span class="breadcrumbs-link">Гостиницы</span>
                 </li>
               </ul>
             </header>
@@ -211,6 +203,7 @@
                           type="number"
                           name="min-price"
                           placeholder="0"
+                          value="0"
                         />
                         <span class="filter-text">от</span>
                       </label>
@@ -220,6 +213,7 @@
                           type="number"
                           name="max-price"
                           placeholder="9000"
+                          value="9000"
                         />
                         <span class="filter-text">до</span>
                       </label>
@@ -259,7 +253,7 @@
                 <option value="expensive">Сначала дорогое</option>
               </select>
               <div class="buttons-shows-row">
-                <a class="button-show button-click" href="#">
+                <a class="button-show button-click" href="catalog.html?view=tile">
                   <svg
                     class="button-show-svg"
                     xmlns="http://www.w3.org/2000/svg"
@@ -276,7 +270,7 @@
                   </svg>
                   <span class="visually-hidden">Показать мелкие карточки</span>
                 </a>
-                <a class="button-show" href="#">
+                <a class="button-show" href="catalog.html?view=card">
                   <svg
                     class="button-show-svg"
                     xmlns="http://www.w3.org/2000/svg"
@@ -291,7 +285,7 @@
                   </svg>
                   <span class="visually-hidden">Показать крупные карточки</span>
                 </a>
-                <a href="#" class="button-show">
+                <a href="catalog.html?view=list" class="button-show">
                   <svg
                     class="button-show-svg"
                     xmlns="http://www.w3.org/2000/svg"
@@ -328,7 +322,7 @@
                   <span class="product-type">Гостиница</span>
                   <span class="product-card-price">От 4000 ₽</span>
                   <a class="product-card-button button" href="#">Подробнее</a>
-                  <button class="button" type="submit">В избранное</button>
+                  <button class="button" type="button">В избранное</button>
                   <div class="stars-row">
                     <div class="star"></div>
                     <div class="star"></div>
@@ -353,7 +347,7 @@
                   <span class="product-type">Гостиница</span>
                   <span class="product-card-price">От 5000 ₽</span>
                   <a class="product-card-button button" href="#">Подробнее</a>
-                  <button class="button product-favorite-button" type="submit">
+                  <button class="button product-favorite-button" type="button">
                     В избранном
                   </button>
                   <div class="stars-row">
@@ -380,7 +374,7 @@
                   <span class="product-type">Гостиница</span>
                   <span class="product-card-price">От 2500 ₽</span>
                   <a class="product-card-button button" href="#">Подробнее</a>
-                  <button class="button" type="submit">В избранное</button>
+                  <button class="button" type="button">В избранное</button>
                   <div class="stars-row">
                     <div class="star"></div>
                     <div class="star"></div>
@@ -404,7 +398,7 @@
                   <span class="product-type">Гостиница</span>
                   <span class="product-card-price">От 1500 ₽</span>
                   <a class="product-card-button button" href="#">Подробнее</a>
-                  <button class="button" type="submit">В избранное</button>
+                  <button class="button" type="button">В избранное</button>
                   <div class="stars-row">
                     <div class="star"></div>
                     <div class="star"></div>
