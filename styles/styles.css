@@ -334,10 +334,9 @@ body {
 }
 
 .heading-text {
-  height: 261px;
   display: flex;
   flex-direction: column;
-  padding: 69px auto;
+  padding: 69px 0;
   align-items: center;
   justify-content: center;
   margin-bottom: 21px;
@@ -349,7 +348,6 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   width: 620px;
-  height: 72px;
   padding: 0;
   margin: 0;
   padding-bottom: 25px;
@@ -359,6 +357,10 @@ body {
   font-size: 22px;
   line-height: 26px;
   margin: 0;
+}
+
+.heading-text .subtext {
+  width: 651px;
 }
 
 .advantages-list {
@@ -389,7 +391,6 @@ body {
   color: #333333;
   margin: 0;
   width: 230px;
-  height: 63px;
   text-align: center;
 }
 
@@ -420,6 +421,10 @@ li.blue {
   margin-bottom: 62px;
   margin-left: 27px;
   position: relative;
+}
+
+.advantages-image {
+  margin: auto 0;
 }
 
 .advantages-title::before {
