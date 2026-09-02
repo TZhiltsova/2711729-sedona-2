@@ -241,10 +241,10 @@ body {
 
 .navigation-list {
   display: flex;
-  width: 465px;
+  min-width: 465px;
   margin: 0;
   padding: 0;
-  margin-left: 168px;
+  padding-left: 168px;
   list-style-type: none;
   flex-wrap: wrap;
 }
@@ -276,6 +276,7 @@ body {
 
 .navigation-link.likes {
   position: relative;
+  margin-right: 20px;
 }
 
 
@@ -321,11 +322,12 @@ body {
 .navigation-user .button {
   padding: 8px 22px;
   margin: 14px auto;
-  margin-left: 20px;
   border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+  min-width: 160px;
+  box-sizing: border-box;
 }
 
 .page-container {
@@ -566,6 +568,7 @@ li.blue {
   justify-content: center;
   align-items: center;
   padding: 40px 0;
+  box-sizing: border-box;
 }
 
 .subscription-text {
