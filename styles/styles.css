@@ -899,12 +899,16 @@ fieldset {
   width: 288px;
 }
 
-.filter-buttons {
+.filter-buttons .button {
   display: flex;
   flex-direction: column;
   width: 191px;
-  min-height: 104px;
+  min-height: 36px;
   margin-top: 56px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 50px;
+  box-sizing: border-box;
 }
 
 .filter-buttons .button:last-child {
@@ -926,7 +930,8 @@ fieldset {
 }
 
 .reset-button {
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 20px;
   border: 3px solid;
   border-color: transparent;
   border-radius: 4px;
@@ -1264,11 +1269,11 @@ fieldset {
   text-align: left;
 }
 
-.product-card-button.button {
+.product-description .button {
   font-size: 16px;
   line-height: 20px;
   min-height: 36px;
-  padding-top: 8px;
+  padding: 8px 0;
   box-sizing: border-box;
 }
 
