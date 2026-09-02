@@ -32,7 +32,7 @@
 
 .button {
   font-family: "PT Sans";
-  color: white;
+  color: #ffffff;
   background-color: #82b3d3;
   font-size: 20px;
   line-height: 36px;
@@ -43,8 +43,8 @@
   border-radius: 4px;
 }
 
-.button:hover,
-.pagination-link:hover {
+.button:hover:not(:disabled),
+.pagination-link:hover:not(:disabled) {
   background-color: #68a2ca;
 }
 
@@ -54,13 +54,33 @@
   background-color: #68a2ca;
 }
 
-.pagination-current:hover,
+.pagination-current:hover:not(:disabled),
 .pagination-current:focus-visible {
   color: #000000;
   background-color: #f2f2f2;
 }
 
-.button.modal-search-result:hover {
+.pagination-current:hover {
+  background-color: inherit;
+}
+
+.pagination-link.pagination-others:hover {
+  color: #000000;
+  background-color: #ffffff;
+  cursor: default;
+}
+
+.pagination-link .pagination-current:focus-visible {
+  background-color: inherit;
+}
+
+.pagination-link.pagination-others:focus-visible {
+  color: #000000;
+  background-color: #ffffff;
+  cursor: default;
+}
+
+.button.modal-search-result:hover:not(:disabled) {
   background-color: #68a2ca;
 }
 
@@ -71,12 +91,12 @@
 
 a.button,
 .booking-button {
-  color: white;
+  color: #ffffff;
   background-color: #756157;
 }
 
-a.button:hover,
-.booking-button:hover {
+a.button:hover:not(:disabled),
+.booking-button:hover:not(:disabled) {
   background-color: #615048;
 }
 
@@ -104,7 +124,7 @@ a.button:focus-visible,
   font-size: 16px;
 }
 
-.product-favorite-button:hover,
+.product-favorite-button:hover:not(:disabled),
 .product-favorite-button:focus-visible {
   background-color: #6c9e42;
 }
@@ -128,7 +148,7 @@ a.button:focus-visible,
   box-sizing: border-box;
 }
 
-.button-show:hover {
+.button-show:hover:not(:disabled) {
   border: 2px solid;
   border-color: #000000;
 }
@@ -247,7 +267,7 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
-  fill: black;
+  fill: #000000;
 }
 
 .navigation-item {
@@ -292,7 +312,6 @@ body {
   position: absolute;
   bottom: 0;
   left: 16px;
-  top: 62px;
   height: 2px;
   right: 16px;
   background-color: #756257;
@@ -306,13 +325,13 @@ body {
   border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .page-container {
   width: 1200px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .heading {
@@ -375,7 +394,7 @@ body {
   display: flex;
 }
 
-.advantages-allignment {
+.advantages-alignment {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -449,7 +468,9 @@ li.blue {
 }
 
 .services-head {
-  height: 246px;
+  min-height: 246px;
+  padding: 64px 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -463,12 +484,14 @@ li.blue {
 }
 
 .services-item {
-  height: 385px;
+  min-height: 385px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 40px 0;
 }
 
 .services-logo {
@@ -483,15 +506,20 @@ li.blue {
   width: 505px;
 }
 
+.services-subtext {
+  max-width: 490px;
+}
+
 .services-name {
   font-size: 24px;
   line-height: 28px;
+  width: 230px;
 }
 
 .services-description {
   width: 230px;
   margin: 0;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .services-name {
@@ -505,8 +533,7 @@ li.blue {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
-  margin-bottom: 96px;
+  padding: 96px 0;
 }
 
 .booking-text {
@@ -529,8 +556,8 @@ li.blue {
 }
 
 .subscription {
-  height: 415px;
-  color: white;
+  min-height: 415px;
+  color: #ffffff;
   background-color: #82b3d3;
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
@@ -538,6 +565,11 @@ li.blue {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 40px 0;
+}
+
+.subscription-text {
+  max-width: 475px;
 }
 
 .subscription-title {
@@ -564,24 +596,14 @@ li.blue {
   fill: #000000;
 }
 
-.footer-logo-img:hover {
+.footer-logo:hover .academia-logo {
   fill: #756157;
 }
 
-.footer-logo:focus-visible {
-  outline: none;
+.footer-logo-link:focus-visible .academia-logo {
   fill: #756157;
 }
 
-.footer-logo-link:focus-visible {
-  outline: none;
-  fill: #756157;
-}
-
-.footer-logo-img:focus-visible {
-  outline: none;
-  fill: #756157;
-}
 
 .footer-logo-img:active {
   fill: rgba(117, 97, 87, 0.3);
@@ -600,14 +622,14 @@ li.blue {
   justify-content: space-between;
   align-items: center;
   padding: 40px 70px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .subscription-form {
   display: grid;
   grid-template-columns: 452px 232px;
-  margin-right: 258px;
-  margin-left: 258px;
+  align-items: center;
+
 }
 
 .field {
@@ -617,12 +639,18 @@ li.blue {
   padding-left: 20px;
   padding-top: 14px;
   padding-bottom: 14px;
+  min-height: 52px;
+  box-sizing: border-box;
   background-color: #f2f2f2;
+  border-radius: 4px 0 0 4px;
 }
 
 .subscription-button {
-  border-radius: 0;
   cursor: pointer;
+  min-height: 52px;
+  width: 232px;
+  box-sizing: border-box;
+  border-radius: 0 4px 4px 0;
 }
 
 .footer-social-list {
@@ -654,7 +682,7 @@ li.blue {
   fill: #83b3d3;
 }
 
-.footer-social-logo:hover {
+.footer-social-logo:hover:not(:disabled) {
   fill: #68a2ca;
 }
 
@@ -666,7 +694,7 @@ li.blue {
   fill: rgba(104, 162, 202, 0.3);
 }
 
-.footer-contacts-address-phone:hover {
+.footer-contacts-address-phone:hover:not(:disabled) {
   color: #756157;
 }
 
@@ -683,7 +711,7 @@ li.blue {
   fill: #000000;
 }
 
-.academia-logo:hover {
+.academia-logo:hover:not(:disabled) {
   fill: #756157;
 }
 
@@ -701,7 +729,7 @@ li.blue {
 }
 
 address .footer-contacts-address-phone {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   color: #000000;
   font-size: 40px;
   line-height: 40px;
@@ -772,8 +800,8 @@ address .footer-contacts-address-phone {
   min-width: 15px;
 }
 
-.breadcrumbs-link:hover,
-.main-icon:hover {
+.breadcrumbs-link:hover:not(:disabled),
+.main-icon:hover:not(:disabled) {
   color: rgba(255, 255, 255, 0.6);
   fill: rgba(255, 255, 255, 0.6);
 }
@@ -810,7 +838,7 @@ address .footer-contacts-address-phone {
   bottom: 0;
   left: 0;
   margin: auto;
-  fill: #fff;
+  fill: #ffffff;
 }
 
 .catalog-filter-group {
@@ -881,7 +909,7 @@ fieldset {
   background-color: transparent;
 }
 
-.filter-buttons .button:last-child:hover {
+.filter-buttons .button:last-child:hover:not(:disabled) {
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -917,7 +945,9 @@ fieldset {
 .range-bar {
   position: absolute;
   height: 4px;
-  background-color: #fff;
+  background-color: #ffffff;
+  left: 0;
+  width: 226px
 }
 
 .range-toggle {
@@ -930,7 +960,7 @@ fieldset {
   cursor: pointer;
 }
 
-.range-toggle:hover {
+.range-toggle:hover:not(:disabled) {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -967,7 +997,8 @@ fieldset {
   display: flex;
   position: relative;
   width: 143px;
-  background-color: #fff;
+  background-color: #ffffff;
+  border-radius: 4px;
 }
 
 .control {
@@ -982,7 +1013,7 @@ fieldset {
   left: 0;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 3px;
 }
 
@@ -990,7 +1021,7 @@ fieldset {
   outline: 3px solid #83b3d3;
 }
 
-.control-input:hover ~ .control-mark {
+.control-input:hover:not(:disabled) ~ .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -998,7 +1029,7 @@ fieldset {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.control-input:hover ~ .control-label {
+.control-input:hover:not(:disabled) ~ .control-label {
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -1086,7 +1117,7 @@ fieldset {
   appearance: none;
 }
 
-.select-control:hover,
+.select-control:hover:not(:disabled),
 .select-control:focus-visible {
   outline: none;
   border-color: #68a2ca;
@@ -1118,7 +1149,7 @@ fieldset {
   color: #000000;
 }
 
-.range-input:hover {
+.range-input:hover:not(:disabled) {
   background-color: #e5e5e5;
 }
 
@@ -1134,11 +1165,11 @@ fieldset {
 }
 
 .range-input.start {
-  border-radius: 2px 0 0 2px;
+  border-radius: 4px 0 0 4px;
 }
 
 .range-input.stop {
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1175,7 +1206,7 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 49px;
+  min-height: 49px;
 }
 
 .catalog-respond-title {
@@ -1190,6 +1221,7 @@ fieldset {
   margin-right: 70px;
   align-self: stretch;
 }
+
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
@@ -1373,19 +1405,21 @@ fieldset {
   padding: 0;
   top: 64px;
   right: 52px;
-  width: 52px;
-  height: 52px;
+  width: 53px;
+  height: 53px;
   background-color: #f2f2f2;
   border-radius: 50%;
   border-color: transparent;
   cursor: pointer;
+  display: grid;
 }
 
 .modal-cross {
-  fill: #000;
+  fill: #000000;
+  margin: auto;
 }
 
-.modal-close-button:hover {
+.modal-close-button:hover:not(:disabled) {
   background-color: #e5e5e5;
 }
 
@@ -1432,7 +1466,7 @@ fieldset {
   position: relative;
 }
 
-.modal-lable {
+.modal-label {
   min-width: 118px;
   margin-right: 18px;
   font-family: "PT Sans", sans-serif;
@@ -1442,7 +1476,7 @@ fieldset {
   text-align: left;
 }
 
-.field-childrens .modal-lable {
+.field-childrens .modal-label {
   margin-right: 14px;
   position: relative;
 }
@@ -1457,6 +1491,15 @@ fieldset {
   display: flex;
 }
 
+
+.modal-field {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  padding-right: 50px;
+}
+
 .field-adults {
   grid-column: 1/2;
 }
@@ -1468,10 +1511,11 @@ fieldset {
 .minus-button,
 .plus-button {
   width: 40px;
-  height: 48px;
+  min-height: 48px;
   padding: 14px 10px;
   box-sizing: border-box;
-  position: absolute;
+  border: none;
+  background-color: transparent;
 }
 
 .adults ~ .minus-button {
@@ -1486,12 +1530,19 @@ fieldset {
   right: 0;
 }
 
+.plus-minus-input {
+  width: 110px;
+  height: 48px;
+  position: relative;
+  display: flex;
+  padding: 0;
+  border-radius: 4px;
+}
+
 .adults,
 .childrens {
-  width: 110px;
-  position: relative;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 31px;
+  padding: 0 10px;
 }
 
 .field-group-one::after,
@@ -1517,36 +1568,28 @@ fieldset {
   border-radius: 3px;
 }
 
-.minus-icon:hover,
-.plus-icon:hover {
-  fill: #000;
+.minus-button:hover .minus-icon,
+.plus-button:hover .plus-icon {
+  fill: #000000;
 }
 
-.minus-icon:active,
-.plus-icon:active {
-  fill: rgba(0, 0, 0, 0.3);
-}
-
-.minus-icon:focus-visible,
-.plus-icon:focus-visible {
-  fill: #000;
+.minus-button:focus-visible .minus-icon,
+.plus-button:focus-visible .plus-icon {
+  fill: #000000;
   outline: 3px solid #83b3d3;
   outline-offset: 2px;
 }
 
-.modal-field {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 700;
-  padding-right: 50px;
+.minus-button:active .minus-icon,
+.plus-button:active .plus-icon {
+  fill: rgba(0, 0, 0, 0.3);
 }
 
-.modal-field:hover {
+.modal-field:hover:not(:disabled) {
   background-color: #e5e5e5;
 }
 
-.modal-field:focus-visible {
+.modal-field:focus-visible:not(.adults):not(.childrens) {
   outline: none;
   border: 3px solid;
   border-color: #83b3d3;
@@ -1554,21 +1597,16 @@ fieldset {
   padding-left: 17px;
 }
 
-.modal-field.adults:focus-visible {
-  outline: none;
-  border: 3px solid;
-  border-color: #83b3d3;
-  padding-right: 48px;
-  padding-left: 49px;
+
+.plus-minus-input:focus-visible {
+  outline: 3px solid #83b3d3;
 }
 
+.modal-field.adults:focus-visible,
 .modal-field.childrens:focus-visible {
   outline: none;
-  border: 3px solid;
-  border-color: #83b3d3;
-  padding-right: 47px;
-  padding-left: 49px;
 }
+
 
 .modal-form-text.count {
   left: 187px;
@@ -1592,9 +1630,9 @@ fieldset {
   color: #ff5757;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .tooltip {
   position: absolute;
@@ -1634,7 +1672,7 @@ fieldset {
   display: none;
 }
 
-.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:hover:not(:disabled) + .tooltip-text,
 .tooltip-toggle:focus-visible + .tooltip-text {
   display: block;
 }
