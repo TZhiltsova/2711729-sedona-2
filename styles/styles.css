@@ -1442,8 +1442,8 @@ fieldset {
   margin: 0;
   margin-bottom: 64px;
   font-family: "PT Sans", sans-serif;
-  font-size: 32px;
-  line-height: 35px;
+  font-size: 30px;
+  line-height: 36px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
@@ -1615,8 +1615,10 @@ fieldset {
 .button.modal-search-result {
   background-color: #83b3d3;
   width: 577px;
-  padding: 18px 257px;
+  padding: 10px 257px;
+  min-height: 60px;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .modal-notification {
@@ -1624,6 +1626,8 @@ fieldset {
   top: 52px;
   left: 132px;
   padding-left: 20px;
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .modal-notification.in {
@@ -1667,6 +1671,7 @@ fieldset {
   padding: 15px 18px 18px 22px;
   border-radius: 10px;
   width: 256px;
+  min-height: 143px;
   box-sizing: border-box;
   text-align: left;
   display: none;
