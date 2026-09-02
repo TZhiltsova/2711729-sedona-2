@@ -1634,9 +1634,9 @@ fieldset {
   color: #ff5757;
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .tooltip {
   position: absolute;
