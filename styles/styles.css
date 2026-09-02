@@ -230,23 +230,28 @@ body {
 
 .nav-left-col {
   display: flex;
+  padding-left: 168px;
+  position: relative;
 }
 
 .navigation-logo {
   position: absolute;
   width: 140px;
   height: 72px;
-  margin-right: 30px;
+  left: 10px;
 }
 
 .navigation-list {
   display: flex;
-  min-width: 465px;
+  min-width: 268px;
   margin: 0;
   padding: 0;
-  padding-left: 168px;
   list-style-type: none;
   flex-wrap: wrap;
+}
+
+.navigation-list.navigation-user {
+  padding-left: 0;
 }
 
 .page-header .navigation-link {
