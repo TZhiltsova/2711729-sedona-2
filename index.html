@@ -220,7 +220,7 @@
 
       <div class="modal-container modal-container-close">
         <div class="modal modal-search">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <svg class="modal-cross" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
               <path
                 d="M14 1.292 12.708 0 7 5.708 1.292 0 0 1.292 5.708 7 0 12.708 1.292 14 7 8.292 12.708 14 14 12.708 8.292 7z" />
@@ -233,13 +233,13 @@
               <fieldset class="field-group field-group-one">
                 <label class="modal-label" for="checkin-date">Дата Заезда:</label>
                 <input class="checkin-date modal-field field" type="text" id="checkin-date" name="checkin-date"
-                  value="27 апреля 2020">
+                  value="27 апреля 2020" required>
                 <span class="modal-notification in">Мы не можем отправить вас в прошлое.</span>
               </fieldset>
               <fieldset class="field-group field-group-two">
                 <label class="modal-label" for="checkout-date">Дата Выезда:</label>
                 <input class="checkout-date modal-field field" type="text" id="checkout-date" name="checkout-date"
-                  value="1 сентября 2023">
+                  value="1 сентября 2023" required>
                 <span class="modal-notification out">На эти даты есть свободные номера. Пока есть.</span>
               </fieldset>
               <fieldset class="field-group field-adults">
