@@ -488,17 +488,18 @@ li.blue {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .services-item {
   min-height: 385px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   padding: 40px 0;
+  width: 400px;
 }
 
 .services-logo {
